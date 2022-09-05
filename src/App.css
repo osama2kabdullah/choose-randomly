@@ -43,6 +43,14 @@
 .cart {
   padding: 2em;
 }
+.random-book img{
+  height: 110px;
+}
+.random-book {
+  display: flex;
+  gap: 1em;
+  align-items: center
+}
 
 @keyframes App-logo-spin {
   from {

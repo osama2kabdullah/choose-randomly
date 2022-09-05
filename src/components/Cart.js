@@ -1,14 +1,24 @@
 import React from 'react';
 
 const Cart = (props) => {
-    console.log(props.data);
+    console.log(props.randomObj);
     return (
         <div className='cart'>
+            <div className="random-board">
+                <h2 style={{textAlign: 'center'}}>Random Books</h2>
+                <div className="random-book">
+                    <img src={props.randomObj.picture} alt="" />
+                    <div style={{lineHeight: '2px'}}>
+                    <h5>{props.randomObj.name}</h5>
+                    <p>{props.randomObj.balance}</p>
+                    </div>
+                </div>
+            </div>
             <h2 style={{textAlign: 'center'}}>Selected Books</h2>
             {
                 props.data.map(item=><div key={item.id}><h3>{item.name}</h3></div>)
             }
-            <button>Pick Randomly</button><br /><br />
+            <button onClick={props.randomBtn}>Pick Randomly</button><br /><br />
             <button onClick={props.btn}>Clear All</button>
         </div>
     );

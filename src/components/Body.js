@@ -28,7 +28,15 @@ const Body = () => {
     
     // clear all event hndlr
     const clearBtn = () => {
-        console.log('clear all');
+        const emtyItems = [];
+        setItems(emtyItems)
+    }
+    
+    //pic randomly btn event hndlr
+    const [random, setRandom] = useState([])
+    const randomBtn = () => {
+        const randomItem = items[Math.floor(Math.random() * items.length)];
+        setRandom(randomItem);
     }
     
     return (
@@ -39,7 +47,7 @@ const Body = () => {
                 }
             </div>
             <div className="product-cart">
-                <Cart btn={()=>clearBtn()} data={items}></Cart>
+                <Cart randomObj={random} randomBtn={()=>randomBtn()} btn={()=>clearBtn()} data={items}></Cart>
             </div>
         </div>
     );
