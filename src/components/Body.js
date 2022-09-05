@@ -35,7 +35,7 @@ const Body = () => {
     //pic randomly btn event hndlr
     const [random, setRandom] = useState([])
     const randomBtn = () => {
-        const randomItem = items[Math.floor(Math.random() * items.length)];
+        const randomItem = items[Math.round(Math.random() * items.length)];
         setRandom(randomItem);
     }
     

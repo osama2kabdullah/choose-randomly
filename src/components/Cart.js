@@ -1,16 +1,17 @@
 import React from 'react';
 
 const Cart = (props) => {
+    const {picture, name, balance} = props.randomObj;
     console.log(props.randomObj);
     return (
         <div className='cart'>
             <div className="random-board">
                 <h2 style={{textAlign: 'center'}}>Random Books</h2>
                 <div className="random-book">
-                    <img src={props.randomObj.picture} alt="" />
+                    <img src={picture} alt="" />
                     <div style={{lineHeight: '2px'}}>
-                    <h5>{props.randomObj.name}</h5>
-                    <p>{props.randomObj.balance}</p>
+                    <h5>{name}</h5>
+                    <p>{balance}</p>
                     </div>
                 </div>
             </div>
