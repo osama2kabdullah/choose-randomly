@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Cart = (props) => {
     const {picture, name, balance} = props.randomObj;
     console.log(props.randomObj);
+    
+    
     return (
         <div className='cart'>
             <div className="random-board">
@@ -17,7 +19,7 @@ const Cart = (props) => {
             </div>
             <h2 style={{textAlign: 'center'}}>Selected Books</h2>
             {
-                props.data.map(item=><div key={item.id}><h3>{item.name}</h3></div>)
+                props.data.map(item=><div key={item.id}><li>{item.name} <i className="fa-solid fa-trash"></i></li></div>)
             }
             <button onClick={props.randomBtn}>Pick Randomly</button><br /><br />
             <button onClick={props.btn}>Clear All</button>
