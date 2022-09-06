@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 const Cart = (props) => {
     const {picture, name, balance} = props.randomObj;
     console.log(props.randomObj);
